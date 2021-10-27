@@ -1,0 +1,472 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(90deg, rgb(160, 222, 219),rgb(3, 165, 209));
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header"
+                         "main main main main"
+                         "main main main main "
+                         "main main main main"
+                         "footer footer footer footer";  
+}
+#homepage main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "Side-pic box-one box-one box-one"
+    "Side-pic box-one box-one box-one "
+    "Side-pic box-one box-one box-one";
+}
+
+
+.headline h1 {
+    color:rgb(35, 113, 116);
+    font-size: 8vh;
+    font-weight: 800;
+    height: 100%;
+    margin-left: 5vw;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    
+}
+.headline h2 {
+    color:#083f2f;
+    font-size: 4vh;
+    font-weight: 400;
+    height: 1.5vh;
+    margin-left: 5vw;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.header {
+    grid-area: header;
+}
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;  
+    margin-right:3vw;
+}
+a {
+    text-decoration: none;
+    color: #34A0A4;
+}
+.menu ul li  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    
+    background: #153f33;
+    width: 17vw;
+    height: 7vh;
+    color: #34A0A4;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 3vh;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+}
+.menu ul li:hover {
+    background-color: #99D98C;
+    color: #168AAD;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1); 
+    box-shadow: none;
+}
+#accueil {
+    border-bottom-left-radius: 25px;
+}
+#publications {
+    border-bottom-right-radius: 25px;
+}
+#homepage .profile-pic {
+    background-image: url(pics/profile.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px 20px 5px; 
+    height: 87%;
+    width: 87%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin-left: 5vw;
+}
+#homepage .sider {
+    grid-area: Side-pic;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#homepage .box-one{
+    grid-area: box-one;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+#homepage  p {
+    font-family: 'Yaldevi', sans-serif;
+    padding: 5vw; 
+    font-size: 2vw;
+    font-weight: 500;
+    color: #1A759F;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 10px;
+    margin-right:4vw;
+    margin-left: 2vw;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 5px;
+    
+}
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.linkedin-icon {
+    background-image: url(pics/linkedin-icon.png);
+    background-position:center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 57px;
+    width: 57px;
+}
+.github-icon {
+    background-image: url(pics/github-icon.png);
+    background-position:center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 57px;
+    width: 57px;
+}
+.google-icon {
+    background-image: url(pics/google-scholar.svg);
+    background-position:center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 57px;
+    width: 57px;
+}
+.email-icon img {
+    background-position:initial;
+    background-size:cover;    
+    background-repeat:no-repeat;
+    fill: blue;
+    height: 57px;
+    width: 57px;
+}
+.footer-icon {
+    cursor: pointer;
+
+}
+.footer-icon:hover {
+    transition: 1s ease-in-out;
+    transform: scale(1.05);   
+}
+
+/* CURSUS PAGE */
+
+#cursus main {
+    grid-area: main;
+    display: grid;
+    justify-items: center;
+    align-items: center ;
+    grid-template-columns: 1fr 1fr  ;
+    grid-template-rows: 1fr ;
+    gap: 3vh;
+}
+#cursus .cursus-box {
+    width: 35vw;
+    height: 35vh;
+}
+#cursus .cursus-box-one-pic {
+    background-image: url(pics/ensimag-logo.png);
+    background-position:center;
+    background-size: 30vw;
+    background-repeat:no-repeat;
+    width: 35vw;
+    height: 35vh;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#cursus .cursus-box-two-pic {
+    background-image: url(pics/upmc-logo.png);
+    background-position:center;
+    background-size: 30vw;
+    background-repeat:no-repeat;
+    width: 35vw;
+    height: 35vh;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#cursus .cursus-box p {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-size: 1.5vw;;
+}
+#cursus .cursus-box:hover {
+    transition: 1s ease-in-out;
+    transform: scale(1.01);   
+}
+
+/* EXPERIENCES PAGE */
+
+#experiences main {
+    grid-area: main;
+    display: grid;
+    justify-items: center;
+    align-items: center ;
+    grid-template-columns: 1fr 1fr  ;
+    grid-template-rows: 1fr 1fr;
+    gap: 1vh;
+    margin: 3vh 15vw 1vh 15vw;
+}
+
+#experiences .experience-box {
+    width: 30vw;
+    height: 20vh;
+    perspective: 70000px;
+
+}
+
+#experiences .experience-box-one-pic {
+    background-image: url(pics/xp/INRIA.png);
+    background-position:center;
+    background-size: contain;
+    background-repeat:no-repeat;
+    width: 30vw;
+    height: 20vh;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    cursor: pointer;
+}
+#experiences .experience-box-two-pic {
+    background-image: url(pics/xp/INRIA.png);
+    background-position:center;
+    background-size: contain;
+    background-repeat:no-repeat;
+    width: 30vw;
+    height: 20vh;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    cursor: pointer;
+}
+#experiences .experience-box-three-pic {
+    background-image: url(pics/xp/INRIA.png);
+    background-position:center;
+    background-size: contain;
+    background-repeat:no-repeat;
+    width: 30vw;
+    height: 20vh;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    cursor: pointer;
+}
+#experiences .experience-box-four-pic {
+    background-image: url(pics/xp/INRIA.png);
+    background-position:center;
+    background-size: contain;
+    background-repeat:no-repeat;
+    width: 30vw;
+    height: 20vh;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    cursor: pointer;
+}
+
+#experiences .back-one {
+    transform: rotateY(180deg);
+    background: white;
+    border-radius: 35px 15px 35px 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#experiences .back-two {
+    transform: rotateY(180deg);
+    background: white;
+    border-radius: 35px 15px 35px 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#experiences .back-three {
+    transform: rotateY(180deg);
+    background: white;
+    border-radius: 35px 15px 35px 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#experiences .back-four {
+    transform: rotateY(180deg);
+    background: white;
+    border-radius: 35px 15px 35px 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#experiences .front-one, .back-one {
+    width: 30vw;
+    height: 20vh;
+    grid-area: overlap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+#experiences .front-two, .back-two {
+    width: 30vw;
+    height: 20vh;
+    grid-area: overlaptwo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+#experiences .front-three, .back-three {
+    width: 30vw;
+    height: 20vh;
+    grid-area: overlaptwo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+#experiences .front-four, .back-four {
+    width: 30vw;
+    height: 20vh;
+    grid-area: overlaptwo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+ #xp-box-1 {
+    transform-style: preserve-3d;
+    display: grid;
+    grid-template-areas: "overlap";
+    width: 30vw;
+    height: 20vh;
+    transition: 1s all ease-in-out;    
+} 
+ #xp-box-2 {
+    transform-style: preserve-3d;
+    display: grid;
+    grid-template-areas: "overlaptwo";
+    width: 30vw;
+    height: 20vh;
+    transition: 1s all ease-in-out;    
+} 
+ #xp-box-3 {
+    transform-style: preserve-3d;
+    display: grid;
+    grid-template-areas: "overlaptwo";
+    width: 30vw;
+    height: 20vh;
+    transition: 1s all ease-in-out;    
+} 
+ #xp-box-4 {
+    transform-style: preserve-3d;
+    display: grid;
+    grid-template-areas: "overlaptwo";
+    width: 30vw;
+    height: 20vh;
+    transition: 1s all ease-in-out;    
+} 
+#experiences .flip {
+    transform: rotateY(180deg);
+} 
+#experiences .plus-button {
+    /* background-image: url(pics/plus-icon.svg);
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    display: flex;   
+    cursor: pointer;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+}
+#experiences .plus-button img {
+    color: tomato;
+    width: 4vw;
+    height: 4vh;
+    cursor: pointer;
+    justify-self: center;
+}
+
+#experiences .experience-box-two-pic {
+    background-image: url(pics/xp/popfarm.jpeg);
+    background-position:center;
+    background-size: contain;
+    background-repeat:no-repeat;
+    width: 30vw;
+    height: 20vh;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+#experiences .experience-box-three-pic {
+    background-image: url(pics/xp/semeia.jpeg);
+    background-position:center;
+    background-size:contain;
+    background-repeat:no-repeat;
+    width: 30vw;
+    height: 20vh;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+#experiences .experience-box-four-pic {
+    background-image: url(pics/xp/chugrenoble.png);
+    background-position:center;
+    background-size:contain;
+    background-repeat:no-repeat;
+    width: 30vw;
+    height: 20vh;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+
+/* /* /* COMPETENCES */
+
+#competences main {
+    
+    height: 100%;
+    width: 75%;
+    grid-area: main;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#competences #tag {
+    position: absolute;
+    
+    /* left: 50%;
+    top: 50%; */
+}
+
+@media (max-width: 1000px) {
+    body {
+       
+    }
+    
+    .headline {
+        width: 77%;
+        font-size: 2px;
+    }
+    .headline h1  {
+        font-size: 7.5vw;
+    }
+    .headline h2 {
+        font-size: 5vw;
+    }
+
+    #homepage main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr ;
+        grid-template-areas: 
+        "box-one box-one box-one"
+        "box-one box-one box-one "
+        "box-one box-one box-one";
+    }
+    .menu ul li  {
+        font-size: 2.5vw; 
+    }
+}
